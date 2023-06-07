@@ -1,0 +1,15 @@
+diff --git a/v4l2loopback/v4l2loopback-dc.c b/v4l2loopback/v4l2loopback-dc.c
+index c9f9e71..890f4e0 100644
+--- a/v4l2loopback/v4l2loopback-dc.c
++++ b/v4l2loopback/v4l2loopback-dc.c
+@@ -619,8 +619,8 @@ vidioc_querycap     (struct file *file,
+   struct v4l2_loopback_device *dev = v4l2loopback_getdevice(file);
+   int devnr = ((struct v4l2loopback_private *)video_get_drvdata(dev->vdev))->devicenr;
+ 
+-  strlcpy(cap->driver, "Droidcam", sizeof(cap->driver));
+-  strlcpy(cap->card  , "Droidcam", sizeof(cap->card));
++  strlcpy(cap->driver, "HP TrueVision HD Camera", sizeof(cap->driver));
++  strlcpy(cap->card  , "HP TrueVision HD Camera", sizeof(cap->card));
+   snprintf(cap->bus_info, sizeof(cap->bus_info), "platform:v4l2loopback_dc-%03d", devnr);
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(3, 1, 0)
